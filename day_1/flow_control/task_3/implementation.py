@@ -20,7 +20,7 @@ def get_days_count_by_month(month):
         'ноябрь': 30,
         'декабрь': 31
     }
-
+    days = 0
     if month in dict_month:
-        return dict_month[month]
-    return 0
+        days = dict_month[month]
+    return days

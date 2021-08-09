@@ -8,10 +8,9 @@ def convert_temperature(value, to_scale):
     Returns: значение как результат конвертации
     """
     if to_scale == 'F':
-        fah = (9 / 5 * value) + 32
-        return fah
+        temperature = (9 / 5 * value) + 32
     elif to_scale == 'C':
-        cel = 5 * (value - 32) / 9
-        return cel
+        temperature = 5 * (value - 32) / 9
     else:
-        return value
+        temperature = value
+    return temperature
