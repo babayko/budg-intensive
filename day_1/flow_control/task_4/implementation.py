@@ -1,3 +1,6 @@
+from datetime import timedelta
+
+
 def get_next_date(some_date):
     """Возвращает следующую дату для заданной
 
@@ -6,4 +9,5 @@ def get_next_date(some_date):
 
     Returns: следующая дата
     """
-    raise NotImplementedError
+    new_date = some_date + timedelta(days=1)
+    return new_date
