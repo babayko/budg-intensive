@@ -28,14 +28,14 @@ def get_next_date(some_date):
     day = some_date.day
 
     if month == 2 and is_leap_year(year) and day == 29:
-        new_date = date(year, month+1, 1)
+        next_day = date(year, month+1, 1)
     elif month == 2 and day == 28 and not is_leap_year(year):
-        new_date = date(year, month+1, 1)
+        next_day = date(year, month+1, 1)
     elif month == 12 and day == 31:
-        new_date = date(year+1, 1, 1)
+        next_day = date(year+1, 1, 1)
     elif month in short_months and day == 30:
-        new_date = date(year, month + 1, 1)
+        next_day = date(year, month + 1, 1)
     else:
-        new_date = date(year, month, day+1)
+        next_day = date(year, month, day+1)
 
-    return new_date
+    return next_day
