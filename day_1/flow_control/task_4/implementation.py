@@ -11,6 +11,7 @@ def leap_year():
 
 
 list_leap_year = leap_year()
+short_month = [4, 6, 9, 11]
 
 
 def get_next_date(some_date):
@@ -21,8 +22,6 @@ def get_next_date(some_date):
 
     Returns: следующая дата
     """
-    short_month = [4, 6, 9, 11]
-
     year = some_date.year
     month = some_date.month
     day = some_date.day
