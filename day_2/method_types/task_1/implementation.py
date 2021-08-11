@@ -1,19 +1,19 @@
 class Coffee:
-    def __init__(self):
-        self._milk = 'Milk'
-        self._icecream = 'Icecream'
-        self._espresso = 'Espresso'
-        self._water = 'Water'
-        self._cinnamon = 'Cinnamon'
+    def __init__(self, ingridients):
+        self.__dict__.update(ingridients)
 
-    def latte(self):
-        return self._espresso + ' & ' + self._milk
+    @classmethod
+    def latte(cls, **kwargs):
+        return cls(ingridients=kwargs)
 
-    def cappuccino(self):
-        return self._espresso + ' & ' + self._milk + ' & ' + self._cinnamon
+    @classmethod
+    def cappuccino(cls, **kwargs):
+        return cls(ingridients=kwargs)
 
-    def glace(self):
-        return self._espresso + ' & ' + self._icecream
+    @classmethod
+    def glace(cls, **kwargs):
+        return cls(ingridients=kwargs)
 
-    def americano(self):
-        return self._espresso + ' & ' + self._water
+    @classmethod
+    def americano(cls, **kwargs):
+        return cls(ingridients=kwargs)
