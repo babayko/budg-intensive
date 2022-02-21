@@ -7,4 +7,10 @@ def convert_temperature(value, to_scale):
 
     Returns: значение как результат конвертации
     """
-    raise NotImplementedError
+    if to_scale == 'F':
+        temperature = (9 / 5 * value) + 32
+    elif to_scale == 'C':
+        temperature = 5 * (value - 32) / 9
+    else:
+        temperature = value
+    return temperature

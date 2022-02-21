@@ -1,4 +1,5 @@
-def counter():
+
+def counter(func):
     """
     Обертка для подсчёта количества вызовов обернутой функции.
 
@@ -6,4 +7,12 @@ def counter():
         int - количество вызовов функции.
     """
 
-    raise NotImplementedError
+    count = 0
+
+    def wrapper(*args):
+        nonlocal count
+        func(*args)
+        count += 1
+        return count
+
+    return wrapper
